@@ -1,0 +1,36 @@
+# input file for ray_tracing
+
+seed = 123456789
+
+#CAMERA'S SECTION:
+view_point        =  10.0   0.0   5.0
+target_point      =   0.0   0.0   0.0
+ambient_rgb       =   0.1   0.1   0.1
+background_rgb    =   0.0   0.0   0.0
+screen_dist       = 8.0
+screen_size       =   4.0  3.0
+screen_pixel_size =  1024  768
+
+#SPHERES' SECTION:
+n_spheres         = 10
+rgb_min           = 0.4
+reflectivity_rgb  =  0.5  0.5  0.5
+n_recursion       = 5
+# bounding box for the spheres. 
+# Sphere's centers will be placed randomly within these limits.
+bbox_min          =  -2.0  -2.0  -2.0
+bbox_max          =   2.0   2.0   2.0
+# sphere radii limits. Radii will be chosen randomly within these limits.
+radius_min        = 0.2
+radius_max        = 0.8
+
+#LIGHTS' SECTION:
+n_lights          = 2
+# bounding box for the lights. Lights will be placed randomly within these limits. 
+bbox_lights_min   = -20.0 -20.0   4.0
+bbox_lights_max   =  20.0  20.0   4.0
+light_intensity   = 1.0
+
+#BITMAPS' SECTION:
+output_file       = output.bmp
+environment_file  = background.bmp
